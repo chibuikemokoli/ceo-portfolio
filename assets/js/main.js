@@ -43,7 +43,7 @@ window.addEventListener('scroll', scrollActive)
 /*===== CHANGE BACKGROUND HEADER =====*/ 
 function scrollHeader(){
     const header = document.getElementById('header')
-    if(this.scrollY >= 200) header.classList.add('scroll-header');
+    if(this.scrollY >= 50) header.classList.add('scroll-header');
     else header.classList.remove('scroll-header')
 }
 window.addEventListener('scroll',scrollHeader)
@@ -56,9 +56,9 @@ function scrollTop(){
 window.addEventListener('scroll',scrollTop)
 
 /*===== MIXITUP FILTER PORTFOLIO =====*/ 
-const mixer = mixitup('.portfolio__container', {
+const mixer = mixitup('.portfolio__container, .portfolioo__container', {
     selectors: {
-        target: '.portfolio__content'
+        target: '.portfolio__content, .portfolioo__content'
     },
     animation: {
         duration: 400
@@ -77,12 +77,12 @@ function activePortfolio(){
 linkPortfolio.forEach(l => l.addEventListener('click', activePortfolio))
 
 /*===== GSAP ANIMATION =====*/ 
-gsap.from('.home__image', {opacity: 0, duration: 2, delay:.5, x:60})
-gsap.from('.home__data', {opacity: 0, duration: 2, delay:.8, y:25})
-gsap.from('.home__greeting, .home__name, .home__profession, .home__button', {opacity: 0, duration: 2, delay:1, y:25, ease:'expo.out', stagger:.2})
+gsap.from('.home__image, .ngg', {opacity: 0, duration: 2, delay:.5, x:60})
+gsap.from('.hero-content, .ngh', {opacity: 0, duration: 2, delay:.8, y:25})
+gsap.from('.hero-text, .wrapper, .social-list, .logos, .ngb', {opacity: 0, duration: 2, delay:1, y:25, ease:'expo.out', stagger:.2})
 
-gsap.from('.nav__logo, .nav__toggle', {opacity: 0, duration: 2, delay:1.5, y:25, ease:'expo.out', stagger:.2})
-gsap.from('.nav__item, .home__images', {opacity: 0, duration: 2, delay:1.8, y:25, ease:'expo.out', stagger:.2})
+gsap.from('.nav__logo, .nav__toggle, .nlg', {opacity: 0, duration: 2, delay:1.5, y:25, ease:'expo.out', stagger:.2})
+gsap.from('.nav__item', {opacity: 0, duration: 2, delay:1.8, y:25, ease:'expo.out', stagger:.2})
 gsap.from('.home__social-icon', {opacity: 0, duration: 2, delay:2.3, y:25, ease:'expo.out', stagger:.2})
 
 
@@ -94,19 +94,48 @@ gsap.to(".third", 1.5, {delay: .9, top: "-100%", ease: Expo.easeInOut});
 
 
 // submit to google sheets
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxmuCz6v88jXsGlhiBkAyAvc8FOxBsPB6dYuWshetc7Bci1FwiiPhZRTsIK9DOkxKzP/exec'
-const form = document.forms['submit-to-google-sheet']
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwxrfwIlehc8vgwqEdH4gTfhGmTzphWIg7g8UpJft_gRLHPXmvvzaIlIS5H7fm28AbqUg/exec'
+const form = document.forms['ceo-dev']
 const msg = document.getElementById("msg")
   
 form.addEventListener('submit', e => {
     e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message Sent Successfully!"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-})
+//     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+//         .then(response => {
+//             msg.innerHTML = "Message Sent Successfully!"
+//             setTimeout(function(){
+//                 msg.innerHTML = ""
+//             },5000)
+//             form.reset()
+//         })
+//         .catch(error => console.error('Error!', error.message))
+// })
+
+fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        showPopup("Your submission has been received! I will review it and get back to you within 24 hours.");
+        form.reset();
+    })
+    .catch(error => {
+        console.error('Error!', error.message);
+        showPopup("Error sending message. Please try again.", "error");
+    })
+    .finally(() => {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send Message';
+    });
+    });
+
+function showPopup(message, className) {
+    popupMessage.textContent = message;
+    popupMessage.className = className;
+    popup.style.display = "block";
+    // setTimeout(() => {
+    //     popup.style.display = "none";
+    // },5000);
+}
+
+
