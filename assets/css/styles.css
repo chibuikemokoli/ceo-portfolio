@@ -1979,7 +1979,7 @@ img{
 
 .logos:hover .logos-slide {
   filter: grayscale(10%);
-  animation-play-state: paused;
+  /* animation-play-state: paused; */
   transition: .3s;
   cursor: pointer;
 }
@@ -1992,6 +1992,7 @@ img{
 
 .logos-slide div {
   display: inline-block;
+  animation: scroll 35s linear infinite;
 }
 
 .logos-slide div p {
