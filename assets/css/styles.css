@@ -1719,7 +1719,8 @@ img{
   }
 
   .nav__item{
-    margin-left: var(--mb-5);
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
     margin-bottom: 0;
     color: #000;
   }
