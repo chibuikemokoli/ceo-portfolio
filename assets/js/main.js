@@ -179,14 +179,14 @@ const testimonials = [
         name: "Emeka Okoli",
         title: "CEO",
         company: "Leadway Support Australia",
-        quote: "I couldn't be happier with what Chibuikem has done for my company. Working with him was an absolute pleasure, he maintained positivity and dedication all through the design and development phase.I highly recommend him to anyone seeking a skilled and enthusiastic web developer, 100% recommend!",
+        quote: "I couldn't be happier with what Chibuikem has done for my company. Working with him was an absolute pleasure, he maintained positivity and dedication all through the design and development phase. I highly recommend him to anyone seeking a skilled and enthusiastic web developer, 100% recommend!",
         avatarUrl: "https://ceo-dev.vercel.app/assets/img/lwsttp.png?auto=compress&cs=tinysrgb&w=600"
     },
     {
         name: "Tobi Arowona",
         title: "Founder",
         company: "Fifteeen-Thirty Four",
-        quote: "Chibuikem brought our brand to life with a stunning website that perfectly captures our essence! His creativity, attention to detail, and expertise in web design are truly impressive.Our new website is not only visually appealing but also user- friendly and optimized for maximum impact.We couldn't be happier with the final result!",
+        quote: "Chibuikem brought our brand to life with a stunning website that perfectly captures our essence! His creativity, attention to detail, and expertise in web design are truly impressive. Our new website is not only visually appealing but also user- friendly and optimized for maximum impact.We couldn't be happier with the final result!",
         avatarUrl: "https://ceo-dev.vercel.app/assets/img/toby.jpg?auto=compress&cs=tinysrgb&w=600"
     }
 ];

@@ -491,7 +491,7 @@ img{
 }
 
 .section-title-3{
-  font-size: var(--fs-1);
+  font-size: var(--fs-2);
   color: var(--first-color);
   /* margin-bottom: var(--mb-3); */
 }
@@ -2882,7 +2882,7 @@ img{
 
 .nav-button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 0 3px #57f63b80;
 }
 
 .prev {
@@ -2940,7 +2940,7 @@ img{
 }
 
 .leaf {
-  height: 10rem
+  height: 8rem
 }
 
 .leaf.is-2 {
@@ -2987,26 +2987,4 @@ img{
   align-items: flex-end;
   margin-bottom: 5rem;
   display: flex
-}
-
-.footer-form-title {
-  color: #fff;
-  background-color: #fff0;
-  padding-left: 0;
-  padding-right: 0;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 32px
-}
-
-.w-button {
-  color: #fff;
-  line-height: inherit;
-  cursor: pointer;
-  background-color: #3898ec;
-  border: 0;
-  border-radius: 0;
-  padding: 9px 15px;
-  text-decoration: none;
-  display: inline-block
 }
