@@ -1583,7 +1583,7 @@ img{
   justify-items: center;
   width: 90%;
   font-weight: 800;
-  font-size: 2.6rem;
+  font-size: var(--fs-4);
   color: #fff;
   animation: blink 3s linear infinite;
 }
