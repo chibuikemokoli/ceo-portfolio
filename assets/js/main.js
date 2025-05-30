@@ -19,6 +19,177 @@ function linkAction(){
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+// Testimonials Data 
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('testimonialSlider');
+    const dotsContainer = document.getElementById('dotsContainer');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+
+    let currentIndex = 0;
+    let isPlaying = true;
+    let touchStartX = null;
+    let touchEndX = null;
+    const autoPlayInterval = 5000;
+    const minSwipeDistance = 50;
+
+    // Create testimonial cards
+    testimonials.forEach((testimonial, index) => {
+        const card = document.createElement('div');
+        card.className = `testimonial-card ${index === 0 ? 'active' : ''}`;
+
+        card.innerHTML = `
+      <div class="card-content">
+        <p class="quote">"${testimonial.quote}"</p>
+        <div class="author">
+          ${testimonial.avatarUrl ? `
+            <img 
+              src="${testimonial.avatarUrl}" 
+              alt="${testimonial.name}'s avatar" 
+              class="author-avatar"
+            />
+          ` : ''}
+          <div class="author-info">
+            <h4>${testimonial.name}</h4>
+            <p>${testimonial.title}${testimonial.company ? `, ${testimonial.company}` : ''}</p>
+          </div>
+        </div>
+      </div>
+    `;
+
+        slider.appendChild(card);
+    });
+
+    // Create dots
+    testimonials.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.className = `dot ${index === 0 ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
+        dot.onclick = () => goToSlide(index);
+        dotsContainer.appendChild(dot);
+    });
+
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Update active states
+        document.querySelectorAll('.testimonial-card').forEach((card, index) => {
+            card.classList.toggle('active', index === currentIndex);
+        });
+
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+        updateSlider();
+    }
+
+    // Event listeners
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+    });
+
+    // Touch events for mobile swipe
+    slider.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchEndX = null;
+    });
+
+    slider.addEventListener('touchmove', (e) => {
+        touchEndX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener('touchend', () => {
+        if (!touchStartX || !touchEndX) return;
+
+        const distance = touchStartX - touchEndX;
+        if (Math.abs(distance) > minSwipeDistance) {
+            if (distance > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        }
+    });
+
+    // Auto-play functionality
+    const testimonialSection = document.querySelector('.testimonial-section');
+
+    function startAutoPlay() {
+        return setInterval(() => {
+            if (isPlaying) nextSlide();
+        }, autoPlayInterval);
+    }
+
+    let autoPlayTimer = startAutoPlay();
+
+    testimonialSection.addEventListener('mouseenter', () => {
+        isPlaying = false;
+        clearInterval(autoPlayTimer);
+    });
+
+    testimonialSection.addEventListener('mouseleave', () => {
+        isPlaying = true;
+        autoPlayTimer = startAutoPlay();
+    });
+});
+
+const testimonials = [
+    {
+        name: "Peggy Okonedo",
+        title: "Founder",
+        company: "Words of Hope Foundation",
+        quote: "You did an outstanding job on our website, Chibuikem! We received rave reviews from a renowned expert in Brands, Communication, and Media, who was particularly impressed with your design. Your entrepreneurial spirit and dedication to your craft are truly admirable. Your incorporation of African American imagery was a great touch.",
+        avatarUrl: "https://wordsofhope.vercel.app/assets/images/Picture1.png?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        name: "Chika Ezekaka",
+        title: "Astraslide",
+        company: "CEO",
+        quote: "Chibuikem was exceptional in crafting our company's state of the art website and brand. He delivered a site that's both stunning and functional, tailored to our pool construction focus. I would highly recommend him to any business looking for top - notch web development. He's the real deal",
+        avatarUrl: "https://astra-slide.vercel.app/assets/img/astraslide-ceo.jpg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        name: "Chudy Odugwe",
+        title: "Interior Designer",
+        company: "Lines and Borders",
+        quote: "Chibuikem is a rare find in web development - a true gem! He took the time to understand my unique needs and delivered a stunning website that drives real results.His dedication and passion for his work are evident in every detail, from the initial consultation to the final launch.",
+        avatarUrl: "https://ceo-dev.vercel.app/assets/img/chudy.jpg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        name: "Emeka Okoli",
+        title: "CEO",
+        company: "Leadway Support Australia",
+        quote: "I couldn't be happier with what Chibuikem has done for my company. Working with him was an absolute pleasure, he maintained positivity and dedication all through the design and development phase.I highly recommend him to anyone seeking a skilled and enthusiastic web developer, 100% recommend!",
+        avatarUrl: "https://ceo-dev.vercel.app/assets/img/lwsttp.png?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        name: "Tobi Arowona",
+        title: "Founder",
+        company: "Fifteeen-Thirty Four",
+        quote: "Chibuikem brought our brand to life with a stunning website that perfectly captures our essence! His creativity, attention to detail, and expertise in web design are truly impressive.Our new website is not only visually appealing but also user- friendly and optimized for maximum impact.We couldn't be happier with the final result!",
+        avatarUrl: "https://ceo-dev.vercel.app/assets/img/toby.jpg?auto=compress&cs=tinysrgb&w=600"
+    }
+];
 /*===== SCROLL SECTIONS ACTIVE LINK =====*/
 const sections = document.querySelectorAll('section[id]')
 

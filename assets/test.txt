@@ -1166,3 +1166,280 @@ span.swiper-pagination-bullet:nth-child(4) {
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   border: 0.2rem solid #fff;
 }
+
+
+### Trusted Companies 
+
+            <section class="section bd-container" style="background: hsl(36, 100%, 99%);">
+                <div class="partners-main-block__label">
+                    Trusted by incredible companies
+                </div>
+                
+                <div class="slider">
+                    <div class="slide-track">
+                        <div class="slide">
+                            <img src="assets/img/15-34l.png"  alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/wohh.png"  alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/lwsttp.png"  alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/astrap.png"  alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/lnb.png"  alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="../northstarmedia/assets/img/northstar.png"  alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/wohh.png"  alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/lwsttp.png"  alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/astrap.png"  alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/lnb.png"  alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/15-34l.png"  alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/wohh.png"  alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/lwsttp.png"  alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/astrap.png"  alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/lnb.png"  alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+### Testimonial
+<section class="testimonials-section">
+                    <section class="section-1">
+                        <section class="author">
+                            <img class="author-img" src="assets/img/wohtrf.png" alt="author-img">
+                            <section class="author-info">
+                                <p class="author-name">Peggy Okonedo</p>
+                                <p class="author-describtion">Founder, Words of Hope Trauma Relief Foundation</p>
+                            </section>
+                        </section>
+                        
+                        <section class="highlight-content">
+                
+                            <p>Created a gorgeous website that actually converts.</p>
+                        </section>
+                        
+                        <section class="content">
+                
+                            <q>You did an outstanding job on our website, Chibuikem! We received rave reviews from a renowned expert in Brands,
+                                Communication, and Media, who was particularly impressed with your design. Your incorporation of African and African
+                                American imagery was a great touch. Your entrepreneurial spirit and dedication to your craft are truly admirable.
+                                Reach out to him if you care about the online presence of your business.
+                            </q>
+                        </section>
+                    </section>
+                    
+                    <section class="section-2">
+                        <section class="author">
+                            <img class="author-img" src="assets/img/astra.png" alt="author-img">
+                            <section class="author-info">
+                                <p class="author-name">Chika Ezekaka</p>
+                                <p class="author-describtion">Founder, Astraslide</p>
+                            </section>
+                        </section>
+
+                        <section class="highlight-content">
+                            <p>
+                                State-of-the-art website that wows everyone I show it to.
+                            </p>
+                        </section>
+                        
+                        <section class="content">
+                
+                            <q>Chibuikem was exceptional in crafting our company's website and brand. He delivered a site that's both stunning and
+                                functional, tailored to our pool construction focus. I would highly recommend him to any business looking
+                                for top-notch web development.
+                            </q>
+                        </section>
+                    </section>
+                    
+                    <section class="section-3">
+                        <section class="author">
+                            <img class="author-img" src="assets/img/lnb.png" alt="author-img">
+                            <section class="author-info">
+                
+                                <p class="author-name">Chudy Odugwe</p>
+                                <p class="author-describtion">Founder, Lines and Borders</p>
+                            </section>
+                        </section>
+
+                        <section class="highlight-content">
+                            <p>
+                                Flawless and Seamless!
+                            </p>
+                        </section>
+
+                        <section class="content">
+                
+                            <q>Chibuikem is a rare find in web development - a true gem! He took the time to understand my unique needs and delivered a
+                            stunning website that drives real results. His dedication and passion for his work are evident in every detail, from the
+                            initial consultation to the final launch.
+                            
+                            If you're seeking a reliable web developer who genuinely cares, look no further than Chibuikem. He provides exceptional
+                            service, outstanding results, and a seamless development process that exceeds expectations. I've been thoroughly
+                            impressed with his expertise, work ethic, and commitment to delivering top-notch solutions.I highly recommend Chibuikem for 
+                            any web development project.</q>
+                        </section>
+                    </section>
+                    
+                    <section class="section-4">
+                        <section class="author">
+                
+                            <img class="author-img" src="assets/img/lwsttp.png" alt="author-img">
+                            <section class="author-info">
+                
+                                <p class="author-name">Emeka Okoli</p>
+                                <p class="author-describtion">Founder, Leadway Support Australia</p>
+                            </section>
+                        </section>
+
+                        <section class="highlight-content">
+                
+                            <p>
+                                He finish work!
+                            </p>
+                        </section>
+
+                        <section class="content">
+                
+                            <q>I couldn't be happier with what Chibuikem has done for my company. Working with him was an absolute pleasure, he
+                            maintained positivity and dedication all through the design and development phase. I highly recommend him to anyone
+                            seeking a skilled and enthusiastic web developer, 100% recommend!</q>
+                        </section>
+                    </section>
+
+                    <section class="section-5">
+                        <section class="author">
+                
+                            <img class="author-img" src="assets/img/15-34l.png" style="background-color: white;" alt="author-img">
+                            <section class="author-info">
+                
+                                <p class="author-name">Tobi Arowona</p>
+                                <p class="author-describtion">Founder, Fifteen-Thirty Four</p>
+                            </section>
+                        </section>
+
+                        <section class="highlight-content">
+                
+                            <p>
+                                Exceptional in crafting our startup's website and brand.
+                            </p>
+                        </section>
+
+                        <section class="content">
+                
+                            <q>Chibuikem brought our brand to life with a stunning website that perfectly captures our essence! His creativity,
+                            attention to detail, and expertise in web design are truly impressive. Our new website is not only visually appealing
+                            but also user-friendly and optimized for maximum impact. We couldn't be happier with the final result!</q>
+                        </section>
+                    </section>
+                </section>
+
+
+
+                Process
+
+                
+            <section class="services section works bd-container">
+                <br>
+                <br>
+                <div class="w-5">
+                    
+                    <span class="section-subtitle" style="background: hsl(36, 100%, 99%);">
+                        
+                        The Process</span>
+                </div>
+
+                <h2 class="section-title" style="color: hsl(36, 100%, 99%);">Your Road to Success</h2>
+            
+                <div class="works-wrapper bd-container">
+                    <div class="works-block mew">
+                        <div class="works-label">
+                            <span class="works-label__value">Step 1</span>
+                        </div>
+                        <h3 class="services__title">Discovery Call</h3>
+        
+                        <ul class="works-list">
+                            <li class="works-list__text text-white">Identify your business challenges and assess your needs</li>
+                            <li class="works-list__text text-white">Takes just 20-30 minutes of your time</li>
+                            <li class="works-list__text text-white">Determines if we are a good fit</li>
+                        </ul>
+                    </div>
+        
+                    <div class="works-block mew">
+                        <div class="works-label">
+                            <span class="works-label__value">Step 2</span>
+                        </div>
+                        <h3 class="title title-white title-small">Strategy Session</h3>
+        
+                        <ul class="works-list">
+                            <li class="works-list__text text-white">Choose the preferred art direction that aligns with your business</li>
+                            <li class="works-list__text text-white">Collaboratively prioritize high-impact design decisions for your business</li>
+                            <li class="works-list__text text-white">Refine the vision that you have for your business and website</li>
+                        </ul>
+                    </div>
+        
+                    <div class="works-block mew">
+                        <div class="works-label">
+                            <span class="works-label__value">Step 3</span>
+                        </div>
+                        <h3 class="title title-white title-small">Design</h3>
+        
+                        <ul class="works-list">
+                            <li class="works-list__text text-white">Kick-off the design phase once the contract is signed</li>
+                            <li class="works-list__text text-white">Develop complete landing page options (2 days)</li>
+                            <li class="works-list__text text-white">Craft the complete website design (within 10 days)</li>
+                        </ul>
+                    </div>
+        
+                    <div class="works-block mew">
+                        <div class="works-label">
+                            <span class="works-label__value">Step 4</span>
+                        </div>
+                        <h3 class="title title-white title-small">Development</h3>
+        
+                        <ul class="works-list">
+                            <li class="works-list__text text-white">Deliver a fully functional, mobile optimised website</li>
+                            <li class="works-list__text text-white">Implement CMS, SEO, Google Analytics, and other integrations</li>
+                            <li class="works-list__text text-white">Typically takes 2-3 weeks, depending on project complexity</li>
+                        </ul>
+                    </div>
+        
+                    <div class="works-block mew">
+                        <div class="works-label">
+                            <span class="works-label__value">Step 5</span>
+                        </div>
+                        <h3 class="title title-white title-small">Launch</h3>
+        
+                        <ul class="works-list">
+                            <li class="works-list__text text-white">Receive a guide for repository and SEO management</li>
+                            <li class="works-list__text text-white">Enjoy additional website and brand design support for the following month</li>
+                            <li class="works-list__text text-white">Opt for 24/7 web content management and maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
