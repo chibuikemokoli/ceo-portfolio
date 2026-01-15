@@ -354,18 +354,6 @@ body {
   background-color: #f4f4f4;
   color: var(--eerie-black);
 }
-/* For the body element */
-body::-webkit-scrollbar {
-  display: none;
-  /* Chrome, Safari, Opera */
-}
-
-body {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-}
 
 body {
   margin: var(--header-height) 0 0 0;
