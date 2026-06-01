@@ -366,7 +366,7 @@ body {
 .grid {
   background: hsl(36, 100%, 99%);
   width: 100%;
-  max-width: 1500px;
+  /* max-width: 1500px; */
   display: grid;
   gap: 1.5vw;
   padding: 24px 6%;
